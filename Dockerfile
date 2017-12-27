@@ -8,7 +8,7 @@ ARG PORT=5000
 
 RUN wget https://github.com/GuntharDeNiro/BTCT/releases/download/$GUNBOT_VERSION/Gunbot.XT.Edition.-.Linux.package.zip -O gunbot.zip \
  && unzip gunbot.zip \
- && rm gunbot.zip
+ && rm gunbot.zip \
  && mv Gunbot\ XT\ Edition\ -\ Linux\ package/* . \
  && rm -rf Gunbot\ XT\ Edition\ -\ Linux\ package/ \
  && chmod +x gunthy-*
