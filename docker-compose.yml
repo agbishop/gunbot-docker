@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  gunbot:
+    image: blackbird7181/gunbot-docker
+    ports:
+      - "5000:5000"
+    volumes:
+      - "/share/Data/container-station-data/config/gunbot/backups:/gunbot/backups"
+      - "/share/Data/container-station-data/config/gunbot/logs:/gunbot/logs" 
+      - "/share/Data/container-station-data/config/gunbot/json:/gunbot/json"
+      - "/share/Data/container-station-data/config/gunbot/config.js:/gunbot/config.js"
+      - "/share/Data/container-station-data/config/gunbot/gunbotgui.db:/gunbot/gunbotgui.db"
+      - "/share/Data/container-station-data/config/gunbot/tgconfig.json:/gunbot/tgconfig.json"
