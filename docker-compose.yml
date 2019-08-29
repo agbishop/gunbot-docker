@@ -1,10 +1,14 @@
 version: "3.7"
 services:
   gunbot:
-    image: blackbird7181/gunbot-docker
+    image: blackbird7181/gunbot:13
     ports:
-      - "5000:5000"
+      - "5555:5000"
+    environment:
+      - TZ=America/Chicago
     volumes:
+      - "/etc/timezone:/etc/timezone:ro"
+      - "/etc/localtime:/etc/localtime:ro"
       - "/share/Data/container-station-data/config/gunbot/backups:/gunbot/backups"
       - "/share/Data/container-station-data/config/gunbot/logs:/gunbot/logs" 
       - "/share/Data/container-station-data/config/gunbot/json:/gunbot/json"
