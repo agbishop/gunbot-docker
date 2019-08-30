@@ -1,11 +1,12 @@
-FROM ubuntu
+FROM alpine:latest
+
+RUN apk update && apk add  unzip wget
 
 ARG GUNBOT_VERSION=v13
 ENV GUNBOT_VERSION ${GUNBOT_VERSION}
 
-RUN apt-get update \
- && apt-get install -y unzip \
- && apt-get clean
+RUN apk update \
+ && apk add unzip wget 
 
 WORKDIR /tmp
 ADD https://github.com/GuntharDeNiro/BTCT/releases/download/${GUNBOT_VERSION}/lin.zip .
