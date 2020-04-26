@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   gunbot:
-    image: blackbird7181/gunbot:13
+    image: blackbird7181/gunbot:18.8.8
     ports:
       - "5555:5000"
     environment:
@@ -14,4 +14,6 @@ services:
       - "/share/Data/container-station-data/config/gunbot/json:/gunbot/json"
       - "/share/Data/container-station-data/config/gunbot/config.js:/gunbot/config.js"
       - "/share/Data/container-station-data/config/gunbot/gunbotgui.db:/gunbot/gunbotgui.db"
+      - "/share/Data/container-station-data/config/gunbot/ssl.key:/gunbot/ssl.key"
+      - "/share/Data/container-station-data/config/gunbot/ssl.crt:/gunbot/ssl.crt"
       - "/share/Data/container-station-data/config/gunbot/tgconfig.json:/gunbot/tgconfig.json"

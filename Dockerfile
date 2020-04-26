@@ -4,7 +4,7 @@ ARG GUNBOT_VERSION=v18.8.8
 ENV GUNBOT_VERSION ${GUNBOT_VERSION}
 
 RUN apt-get update \
- && apt-get install -y unzip \
+ && apt-get install -y unzip fontconfig-devel openssl \
  && apt-get clean
 
 WORKDIR /tmp
