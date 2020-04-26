@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   gunbot:
-    image: blackbird7181/gunbot:18.8.8
+    image: blackbird7181/gunbot:latest
     ports:
       - "5555:5000"
     environment:
